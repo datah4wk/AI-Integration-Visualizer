@@ -34,7 +34,8 @@ export default function InputContainer({ onSubmit, isLoading }: InputContainerPr
             type="text"
             value={message}
             onChange={(e) => setMessage(e.target.value)}
-            placeholder="Ask a yes/no question..."
+            placeholder="Ask a yes/no question, e.g. \"Is the sky blue?\""
+            aria-label="yes or no question"
             className="flex-1 bg-black/30 text-white font-mono px-4 py-3 rounded-lg outline-none border border-transparent focus:border-blue-500/50 focus:ring-2 focus:ring-blue-500/20 transition-all"
             whileFocus={{ boxShadow: "0 0 20px rgba(59, 130, 246, 0.6)" }}
             disabled={isLoading}

@@ -26,6 +26,13 @@ The app sends your question to an AI (Groq) and tells it to only answer YES or N
 4. Run `npm run dev`
 5. Ask away!
 
+## Usage
+
+1. Type a yes/no question in the input box (for example, "Is water wet?")
+2. Press **Submit** to send the question to the AI
+3. The box labelled **YES** or **NO** will glow to show the AI's answer
+4. Any connection issues will be reported below the input field
+
 ## Built With
 
 - Next.js
