@@ -71,6 +71,16 @@ export default function AIDecisionVisualizer() {
           AI Decision Visualizer
         </motion.h1>
 
+        <motion.p
+          className="text-center text-sm md:text-base text-white/80 max-w-lg"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.4, duration: 0.8 }}
+        >
+          Type a yes or no question below and watch the corresponding box glow
+          green for YES or red for NO.
+        </motion.p>
+
         <InputContainer onSubmit={handleSubmit} isLoading={loading} />
 
         {response && response.includes("Error") && (
@@ -92,7 +102,10 @@ export default function AIDecisionVisualizer() {
             transition={{ delay: 1.2, duration: 0.8 }}
             className="text-xs text-center text-white/60 max-w-md px-4"
           >
-            This app demonstrates how to visualize AI decision logic using React and Framer Motion.
+            This demo uses Groq's language model to answer with
+            <span className="font-semibold"> YES </span> or
+            <span className="font-semibold"> NO</span>. The glowing boxes
+            highlight the AI's choice in real time.
           </motion.div>
 
           <Footer />
